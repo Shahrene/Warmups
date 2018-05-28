@@ -1,0 +1,61 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  margin: 0 auto;
+  background-color: #8d38aa;
+  font-family: 'Courier New', sans-serif;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+h1 {
+  font-size: 2em;
+  color: white;
+  font-weight: bold;
+}
+
+span {
+  font-size: 1.5em;
+  color: white;
+}
+
+#clock_face {
+  position: relative;
+  width: 600px;
+  height: 600px;
+  margin: 16px auto 0 auto;
+  background: url(images/clock_face.png);
+  background-size: contain;
+  list-style: none;
+}
+
+#second-hand {
+  z-index: 3;
+  position: absolute;
+  top: 24%;
+  left: 46%;
+  width: 8%;
+  height: 40%;
+}
+
+#minute-hand {
+  z-index: 2;
+  position: absolute;
+  top: 26%;
+  left: 47%;
+  width: 7%;
+  height: 38%;
+}
+
+#hour-hand {
+  position: absolute;
+  z-index: 1;
+  top: 30%;
+  left: 46%;
+  width: 7%;
+  height: 34%;
+}

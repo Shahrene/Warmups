@@ -1,0 +1,481 @@
+  [1m[35m (471.0ms)[0m  [1m[35mCREATE DATABASE "pokemon_app_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (439.8ms)[0m  [1m[35mCREATE DATABASE "pokemon_app_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (18.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (23.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (6.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5666816148006029310)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreatePokemons (20180502233929)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (33.6ms)[0m  [1m[35mCREATE TABLE "pokemons" ("id" bigserial primary key, "species" character varying, "nickname" character varying, "level" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20180502233929_create_pokemons.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (3.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180502233929"]]
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (11.0ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-05-02 23:41:57.170184"], ["updated_at", "2018-05-02 23:41:57.170184"]]
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(5666816148006029310)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/" for 127.0.0.1 at 2018-05-03 09:56:32 +1000
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/shahrene/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/shahrene/.rvm/gems/ruby-2.4.1/gems/railties-5.2.0/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/shahrene/.rvm/gems/ruby-2.4.1/gems/railties-5.2.0/lib/rails/templates/rails/welcome/index.html.erb (2.8ms)
+Completed 200 OK in 24ms (Views: 9.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pokemons/index" for 127.0.0.1 at 2018-05-03 09:56:56 +1000
+Processing by PokemonsController#index as HTML
+  Rendering pokemons/index.html.erb within layouts/application
+  Rendered pokemons/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 409ms (Views: 406.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pokemons/new" for 127.0.0.1 at 2018-05-03 09:57:07 +1000
+Processing by PokemonsController#new as HTML
+  Rendering pokemons/new.html.erb within layouts/application
+  Rendered pokemons/new.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 20ms (Views: 17.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sales/" for 127.0.0.1 at 2018-05-03 11:08:44 +1000
+  
+SyntaxError (/Users/shahrene/wdi/warmups/pokemon_app/config/routes.rb:5: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+  get 'pokemons/index' to: 'pokemons#index'
+                         ^):
+  
+config/routes.rb:5: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5666816148006029310)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to AddImageToPokemon (20180503043518)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (28.1ms)[0m  [1m[35mALTER TABLE "pokemons" ADD "image" character varying[0m
+  ↳ db/migrate/20180503043518_add_image_to_pokemon.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (1.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180503043518"]]
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (6.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(5666816148006029310)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/" for 127.0.0.1 at 2018-05-03 14:42:05 +1000
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/shahrene/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by PokemonsController#index as HTML
+  Rendering pokemons/index.html.erb within layouts/application
+  Rendered pokemons/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 206ms (Views: 189.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/new" for 127.0.0.1 at 2018-05-03 14:42:26 +1000
+  
+ActionController::RoutingError (No route matches [GET] "/new"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/pokemons/new" for 127.0.0.1 at 2018-05-03 14:42:47 +1000
+Processing by PokemonsController#new as HTML
+  Rendering pokemons/new.html.erb within layouts/application
+  Rendered pokemons/new.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 26ms (Views: 23.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pokemons/new" for 127.0.0.1 at 2018-05-03 14:46:27 +1000
+Processing by PokemonsController#new as HTML
+  Rendering pokemons/new.html.erb within layouts/application
+  Rendered pokemons/new.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 36ms (Views: 32.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pokemons/new" for 127.0.0.1 at 2018-05-03 18:16:05 +1000
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/shahrene/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by PokemonsController#new as HTML
+  Rendering pokemons/new.html.erb within layouts/application
+  Rendered pokemons/new.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 232ms (Views: 218.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/pokemons" for 127.0.0.1 at 2018-05-03 18:16:58 +1000
+  
+ActionController::RoutingError (No route matches [POST] "/pokemons"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/pokemons" for 127.0.0.1 at 2018-05-03 18:30:28 +1000
+  
+ActionController::RoutingError (No route matches [GET] "/pokemons"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started POST "/pokemons" for 127.0.0.1 at 2018-05-03 18:35:14 +1000
+  
+ActionController::RoutingError (No route matches [POST] "/pokemons"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started POST "/pokemons" for 127.0.0.1 at 2018-05-03 18:41:33 +1000
+Processing by PokemonsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/TgBuAfpfwRefWi0oQntPdYfYoz2tVxgqjvUxOw6BXumL2Pfll7j2kKcXvuPzzHUlKDoQ9s7K1IwlePt1qGH1A==", "species"=>"Charmander", "nickname"=>"Chazza", "level"=>"2", "image"=>"https://static.giantbomb.com/uploads/scale_small/0/6087/2438704-1202149925_t.png"}
+Completed 500 Internal Server Error in 32ms (ActiveRecord: 27.8ms)
+
+
+  
+ActiveRecord::StatementInvalid (PG::UndefinedTable: ERROR:  relation "application_records" does not exist
+LINE 8:                WHERE a.attrelid = '"application_records"'::r...
+                                          ^
+:               SELECT a.attname, format_type(a.atttypid, a.atttypmod),
+                     pg_get_expr(d.adbin, d.adrelid), a.attnotnull, a.atttypid, a.atttypmod,
+                     c.collname, col_description(a.attrelid, a.attnum) AS comment
+                FROM pg_attribute a
+                LEFT JOIN pg_attrdef d ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+                LEFT JOIN pg_type t ON a.atttypid = t.oid
+                LEFT JOIN pg_collation c ON a.attcollation = c.oid AND a.attcollation <> t.typcollation
+               WHERE a.attrelid = '"application_records"'::regclass
+                 AND a.attnum > 0 AND NOT a.attisdropped
+               ORDER BY a.attnum
+):
+  
+app/controllers/pokemons_controller.rb:13:in `create'
+Started POST "/pokemons" for 127.0.0.1 at 2018-05-03 20:22:25 +1000
+Processing by PokemonsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/TgBuAfpfwRefWi0oQntPdYfYoz2tVxgqjvUxOw6BXumL2Pfll7j2kKcXvuPzzHUlKDoQ9s7K1IwlePt1qGH1A==", "species"=>"Charmander", "nickname"=>"Chazza", "level"=>"2", "image"=>"https://static.giantbomb.com/uploads/scale_small/0/6087/2438704-1202149925_t.png"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/pokemons_controller.rb:18
+  [1m[36mPokemon Create (11.8ms)[0m  [1m[32mINSERT INTO "pokemons" ("species", "nickname", "level", "created_at", "updated_at", "image") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["species", "Charmander"], ["nickname", "Chazza"], ["level", "2"], ["created_at", "2018-05-03 10:22:25.976128"], ["updated_at", "2018-05-03 10:22:25.976128"], ["image", "https://static.giantbomb.com/uploads/scale_small/0/6087/2438704-1202149925_t.png"]]
+  ↳ app/controllers/pokemons_controller.rb:18
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/pokemons_controller.rb:18
+Redirected to http://localhost:3000/
+Completed 302 Found in 51ms (ActiveRecord: 39.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-03 20:22:25 +1000
+Processing by PokemonsController#index as HTML
+  Rendering pokemons/index.html.erb within layouts/application
+  Rendered pokemons/index.html.erb within layouts/application (2.6ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    3:     <h1>Pokedex</h1>
+    4: <a href="/pokemons/new">Add a New Pokemon</a>
+    5:     <div class="">
+    6:       <% @pokemon.each do |pokemon| %>
+    7:         <ul>
+    8:           <li>Species: <%= pokemon.species %></li>
+    9:           <li>Nickname: <%= pokemon.nickname %></li>
+  
+app/views/pokemons/index.html.erb:6:in `_app_views_pokemons_index_html_erb__2968281368664082881_70140662549400'
+Started POST "/pokemons" for 127.0.0.1 at 2018-05-03 20:26:53 +1000
+Processing by PokemonsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/TgBuAfpfwRefWi0oQntPdYfYoz2tVxgqjvUxOw6BXumL2Pfll7j2kKcXvuPzzHUlKDoQ9s7K1IwlePt1qGH1A==", "species"=>"Charmander", "nickname"=>"Chazza", "level"=>"2", "image"=>"https://static.giantbomb.com/uploads/scale_small/0/6087/2438704-1202149925_t.png"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/pokemons_controller.rb:18
+  [1m[36mPokemon Create (0.6ms)[0m  [1m[32mINSERT INTO "pokemons" ("species", "nickname", "level", "created_at", "updated_at", "image") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["species", "Charmander"], ["nickname", "Chazza"], ["level", "2"], ["created_at", "2018-05-03 10:26:53.640987"], ["updated_at", "2018-05-03 10:26:53.640987"], ["image", "https://static.giantbomb.com/uploads/scale_small/0/6087/2438704-1202149925_t.png"]]
+  ↳ app/controllers/pokemons_controller.rb:18
+  [1m[35m (5.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/pokemons_controller.rb:18
+Redirected to http://localhost:3000/
+Completed 302 Found in 9ms (ActiveRecord: 6.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-03 20:26:53 +1000
+Processing by PokemonsController#index as HTML
+  Rendering pokemons/index.html.erb within layouts/application
+  [1m[36mPokemon Load (0.4ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  ↳ app/views/pokemons/index.html.erb:6
+  Rendered pokemons/index.html.erb within layouts/application (10.5ms)
+Completed 200 OK in 29ms (Views: 26.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/pokemons/new" for 127.0.0.1 at 2018-05-03 20:27:14 +1000
+Processing by PokemonsController#new as HTML
+  Rendering pokemons/new.html.erb within layouts/application
+  Rendered pokemons/new.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 25ms (Views: 22.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/pokemons" for 127.0.0.1 at 2018-05-03 20:29:16 +1000
+Processing by PokemonsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tlHXRcg7QFTvUtxIITGtsQ/QEDmpXH/9xLYCv2YbSqW5PJjKco7DqBQy5EUGGbJ0P0HUeM7Bj0wUyZUC1TeiCw==", "species"=>"Squirtle", "nickname"=>"Squizza", "level"=>"5", "image"=>"https://static.giantbomb.com/uploads/scale_small/13/135472/1891764-007squirtle.png"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/pokemons_controller.rb:18
+  [1m[36mPokemon Create (0.5ms)[0m  [1m[32mINSERT INTO "pokemons" ("species", "nickname", "level", "created_at", "updated_at", "image") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["species", "Squirtle"], ["nickname", "Squizza"], ["level", "5"], ["created_at", "2018-05-03 10:29:16.444316"], ["updated_at", "2018-05-03 10:29:16.444316"], ["image", "https://static.giantbomb.com/uploads/scale_small/13/135472/1891764-007squirtle.png"]]
+  ↳ app/controllers/pokemons_controller.rb:18
+  [1m[35m (6.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/pokemons_controller.rb:18
+Redirected to http://localhost:3000/
+Completed 302 Found in 10ms (ActiveRecord: 6.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-03 20:29:16 +1000
+Processing by PokemonsController#index as HTML
+  Rendering pokemons/index.html.erb within layouts/application
+  [1m[36mPokemon Load (0.3ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  ↳ app/views/pokemons/index.html.erb:6
+  Rendered pokemons/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 21ms (Views: 18.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-03 20:32:15 +1000
+Processing by PokemonsController#index as HTML
+  Rendering pokemons/index.html.erb within layouts/application
+  [1m[36mPokemon Load (0.6ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  ↳ app/views/pokemons/index.html.erb:6
+  Rendered pokemons/index.html.erb within layouts/application (12.1ms)
+Completed 200 OK in 32ms (Views: 23.4ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-03 20:33:53 +1000
+Processing by PokemonsController#index as HTML
+  Rendering pokemons/index.html.erb within layouts/application
+  [1m[36mPokemon Load (0.3ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  ↳ app/views/pokemons/index.html.erb:6
+  Rendered pokemons/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 30ms (Views: 23.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-03 20:34:53 +1000
+Processing by PokemonsController#index as HTML
+  Rendering pokemons/index.html.erb within layouts/application
+  [1m[36mPokemon Load (0.3ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  ↳ app/views/pokemons/index.html.erb:6
+  Rendered pokemons/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 27ms (Views: 21.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-03 21:18:16 +1000
+Processing by PokemonsController#index as HTML
+  Rendering pokemons/index.html.erb within layouts/application
+  [1m[36mPokemon Load (0.7ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  ↳ app/views/pokemons/index.html.erb:6
+  Rendered pokemons/index.html.erb within layouts/application (15.5ms)
+Completed 200 OK in 34ms (Views: 21.5ms | ActiveRecord: 9.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-03 21:18:25 +1000
+Processing by PokemonsController#index as HTML
+  Rendering pokemons/index.html.erb within layouts/application
+  [1m[36mPokemon Load (0.8ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  ↳ app/views/pokemons/index.html.erb:6
+  Rendered pokemons/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 32ms (Views: 24.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/rails/info/routes" for 127.0.0.1 at 2018-05-03 21:30:04 +1000
+Processing by Rails::InfoController#routes as HTML
+  Rendering /Users/shahrene/.rvm/gems/ruby-2.4.1/gems/railties-5.2.0/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of /Users/shahrene/.rvm/gems/ruby-2.4.1/gems/actionpack-5.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb [11 times] (2.6ms)
+  Rendered /Users/shahrene/.rvm/gems/ruby-2.4.1/gems/actionpack-5.2.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.8ms)
+  Rendered /Users/shahrene/.rvm/gems/ruby-2.4.1/gems/railties-5.2.0/lib/rails/templates/rails/info/routes.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 27ms (Views: 18.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-03 21:30:41 +1000
+Processing by PokemonsController#index as HTML
+  Rendering pokemons/index.html.erb within layouts/application
+  Rendered pokemons/index.html.erb within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/shahrene/wdi/warmups/pokemon_app/app/views/pokemons/index.html.erb:14: syntax error, unexpected '>'
+r.safe_append='", class: "" %>
+                              ^
+/Users/shahrene/wdi/warmups/pokemon_app/app/views/pokemons/index.html.erb:17: syntax error, unexpected '<', expecting ')'
+    </div>
+     ^
+/Users/shahrene/wdi/warmups/pokemon_app/app/views/pokemons/index.html.erb:17: unterminated regexp meets end of file):
+  
+app/views/pokemons/index.html.erb:14: syntax error, unexpected '>'
+app/views/pokemons/index.html.erb:17: syntax error, unexpected '<', expecting ')'
+app/views/pokemons/index.html.erb:17: unterminated regexp meets end of file
+Started GET "/" for 127.0.0.1 at 2018-05-03 21:31:37 +1000
+Processing by PokemonsController#index as HTML
+  Rendering pokemons/index.html.erb within layouts/application
+  Rendered pokemons/index.html.erb within layouts/application (0.6ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/shahrene/wdi/warmups/pokemon_app/app/views/pokemons/index.html.erb:14: syntax error, unexpected '>'
+utput_buffer.safe_append='" %>
+                              ^
+/Users/shahrene/wdi/warmups/pokemon_app/app/views/pokemons/index.html.erb:17: syntax error, unexpected '<', expecting ')'
+    </div>
+     ^
+/Users/shahrene/wdi/warmups/pokemon_app/app/views/pokemons/index.html.erb:17: unterminated regexp meets end of file):
+  
+app/views/pokemons/index.html.erb:14: syntax error, unexpected '>'
+app/views/pokemons/index.html.erb:17: syntax error, unexpected '<', expecting ')'
+app/views/pokemons/index.html.erb:17: unterminated regexp meets end of file
+Started GET "/" for 127.0.0.1 at 2018-05-03 21:46:10 +1000
+Processing by PokemonsController#index as HTML
+  Rendering pokemons/index.html.erb within layouts/application
+  Rendered pokemons/index.html.erb within layouts/application (0.5ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/shahrene/wdi/warmups/pokemon_app/app/views/pokemons/index.html.erb:14: syntax error, unexpected '>'
+tput_buffer.safe_append='") %>
+                              ^
+/Users/shahrene/wdi/warmups/pokemon_app/app/views/pokemons/index.html.erb:16: unterminated regexp meets end of file
+/Users/shahrene/wdi/warmups/pokemon_app/app/views/pokemons/index.html.erb:16: syntax error, unexpected end-of-input, expecting ')'):
+  
+app/views/pokemons/index.html.erb:14: syntax error, unexpected '>'
+app/views/pokemons/index.html.erb:16: unterminated regexp meets end of file
+app/views/pokemons/index.html.erb:16: syntax error, unexpected end-of-input, expecting ')'
+Started GET "/" for 127.0.0.1 at 2018-05-03 21:52:22 +1000
+Processing by PokemonsController#index as HTML
+  Rendering pokemons/index.html.erb within layouts/application
+  Rendered pokemons/index.html.erb within layouts/application (0.5ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/shahrene/wdi/warmups/pokemon_app/app/views/pokemons/index.html.erb:14: syntax error, unexpected $undefined, expecting ')'
+;@output_buffer.safe_append='\') %>
+                              ^
+/Users/shahrene/wdi/warmups/pokemon_app/app/views/pokemons/index.html.erb:15: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;         end 
+                     ^
+/Users/shahrene/wdi/warmups/pokemon_app/app/views/pokemons/index.html.erb:19: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+                ^
+/Users/shahrene/wdi/warmups/pokemon_app/app/views/pokemons/index.html.erb:21: syntax error, unexpected keyword_end, expecting ')'
+          end
+             ^):
+  
+app/views/pokemons/index.html.erb:14: syntax error, unexpected $undefined, expecting ')'
+app/views/pokemons/index.html.erb:15: syntax error, unexpected keyword_end, expecting ')'
+app/views/pokemons/index.html.erb:19: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/pokemons/index.html.erb:21: syntax error, unexpected keyword_end, expecting ')'

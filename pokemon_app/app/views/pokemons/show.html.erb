@@ -1,0 +1,15 @@
+
+<h2> <%= @pokemon.species %> </h2>
+
+<p> <%= @pokemon.nickname %> </p>
+<p> <%= @pokemon.level %> </p>
+
+<img src="<%=image %>" >
+
+
+<form action="" method="post">
+  <input type="hidden" name="_method" value="delete">
+  <button>Delete</button>
+</form>
+
+<a href="/pokemons/<%=@pokemon.id%>/edit">Edit</a>

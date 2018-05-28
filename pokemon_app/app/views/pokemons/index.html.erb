@@ -1,0 +1,14 @@
+
+
+    <div class="">
+      <% @pokemons.each do |pokemon| %>
+        <ul>
+          <li>Species: <%= pokemon.species %></li>
+          <li>Nickname: <%= pokemon.nickname %></li>
+          <li>Level: <%= pokemon.level %></li>
+        </ul>
+        <% end %>
+        <%= link_to show_path do %>
+          <%= image_tag('<%= pokemon.image %>') %>
+        <% end %>
+    </div>

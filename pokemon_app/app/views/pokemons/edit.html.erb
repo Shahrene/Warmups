@@ -1,0 +1,13 @@
+<h1>Update Pokemon</h1>
+
+<%= form_tag '/pokemons', method: 'post' do %>
+  <label for="">Species</label>
+  <textarea name="description"> <%=@pokemon.species%> </textarea>
+  <label for="">Nickname</label>
+  <textarea name="description"> <%=@pokemon.nickname%> </textarea>
+  <label for="">Level</label>
+  <textarea name="description"> <%=@pokemon.level%> </textarea>
+  <label for="">Image</label>
+  <textarea name="description"> <%=@pokemon.image%> </textarea>
+  <button>Update</button>
+<% end %>

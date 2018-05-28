@@ -1,0 +1,40 @@
+body {
+  background-color: #2d2d3f;
+  font-family: Tahoma;
+}
+
+.accordion {
+    background-color: #ffffff;
+    text-decoration: none;
+    width: 30%;
+    display: block;
+    color: #58585a;
+    cursor: pointer;
+    padding: 18px;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    border: 1px solid lightgrey;
+}
+
+.active, .accordion:hover {
+    background-color: #a8444f;
+    color: #ffffff;
+}
+
+.panel {
+    padding: 18px;
+    background-color: #444457;
+    color: #ffffff;
+    display: none;
+    max-height: 0;
+    transition: max-height 0.2s ease-out;
+    overflow: hidden;
+}
+
+a:hover {
+  background-color: #a8444f;
+  color: #ffffff;
+  text-decoration: none;
+}

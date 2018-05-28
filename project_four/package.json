@@ -1,0 +1,22 @@
+{
+  "name": "project_four",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^2.6.1",
+    "express": "^4.16.3",
+    "lodash": "^4.17.10",
+    "pg-promise": "^8.4.4",
+    "request": "^2.87.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.17.4"
+  }
+}
